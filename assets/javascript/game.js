@@ -11,7 +11,7 @@ function generateAlphabet() {
 var wins = 0;
 var losses = 0;
 var guesses = 9;
-
+var alreadyGuessedArr = [];
 
 var $wins = document.getElementById("winTotal");
 var $losses = document.getElementById("lossesTotal");
@@ -29,7 +29,7 @@ var computerGuess = alphabet[Math.floor(Math.random() * alphabet.length)];
 
 
 console.log("Computer Guess:", computerGuess);
-var alreadyGuessedArr = [];
+
 
 document.onkeyup = function (event) {
   if (alreadyGuessedArr.length <= 9) {
